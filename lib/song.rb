@@ -33,8 +33,8 @@ class Song
   end
   
   def self.find_or_create_by_name(name)
-    song = Song.find_by_name(name) #returns song instance or nil 
-    song = Song.create_by_name(name) if !song #nil 
+    song = self.find_by_name(name) #returns song instance or nil 
+    song = self.create_by_name(name) if !song #nil 
     song  
   end
   
